@@ -1,12 +1,15 @@
-import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import styles from '../styles/Home.module.css';
+import { Text } from '@chakra-ui/react';
+
+import Container from '../components/Layouts/Container';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      
-    </div>
-  )
-}
+    <Container>
+      <Text> HI </Text>
+    </Container>
+  );
+};
 
-export default Home
+export default Home;

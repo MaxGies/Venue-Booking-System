@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 4;
+  gap: 4px 4px;
+  padding-inline: 4%;
+  padding-top: 32px;
+  line-height: 0px;
+  flex: 1;
+}
+
+.image {
+  height: 150px;
+  flex-grow: 1;
+}
