@@ -1,17 +1,5 @@
 import { useState, useEffect } from 'react';
-import {
-  Text,
-  Flex,
-  Box,
-  Icon,
-  Button,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverBody,
-  Portal,
-  IconButton,
-} from '@chakra-ui/react';
+import { Text, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -37,7 +25,7 @@ const NavBar = () => {
           <Link href="/bookings">
             <a>
               <Text fontSize="xl" color="white">
-                Booking System
+                Booking Room
               </Text>
             </a>
           </Link>

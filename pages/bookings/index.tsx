@@ -1,36 +1,20 @@
-import { useState, useEffect, Fragment } from 'react';
-import { Text } from '@chakra-ui/react';
+import { useState, useEffect } from 'react';
+import { Text, Flex } from '@chakra-ui/react';
 
-import { BookingDataType } from '../../utils/types';
 import Container from '../../components/Layouts/Container';
+import BookingForm from '../../components/Booking/BookingForm';
 
 const BookingPage = () => {
-  const [booking, setBooking] = useState<BookingDataType[]>([]);
-
-  useEffect(() => {
-    const fetchBooking = async () => {
-      const response = await fetch('/api/bookingData');
-      const data = await response.json();
-      setBooking(data);
-    };
-
-    fetchBooking();
-  }, []);
-
   return (
     <Container>
-      <Text fontSize="50px"> HI </Text>
-      {booking.map((x) => {
-        return (
-          <Fragment key={x.id}>
-            <Text>{x.id}</Text>
-            <Text>{x.roomId}</Text>
-            <Text>{x.startTime}</Text>
-            <Text>{x.endTime}</Text>
-            <Text>{x.title}</Text>
-          </Fragment>
-        );
-      })}
+      <Flex bgColor="#d8dbed" px="4%" pt="48px" pb="36px" mb="32px">
+        <Text fontSize="48px" fontWeight="bold">
+          Booking Room
+        </Text>
+      </Flex>
+      <Flex justifyContent="center" mt="48px">
+        <BookingForm />
+      </Flex>
     </Container>
   );
 };
