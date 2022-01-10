@@ -17,14 +17,21 @@ const NavBar = () => {
         <Flex gridGap="32px">
           <Link href="/gallery">
             <a>
-              <Text fontSize="xl" color="white">
+              <Text fontSize="m" color="white">
                 Gallery
+              </Text>
+            </a>
+          </Link>
+          <Link href="/rooms">
+            <a>
+              <Text fontSize="m" color="white">
+                About Room
               </Text>
             </a>
           </Link>
           <Link href="/bookings">
             <a>
-              <Text fontSize="xl" color="white">
+              <Text fontSize="m" color="white">
                 Booking Room
               </Text>
             </a>

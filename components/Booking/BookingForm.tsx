@@ -40,7 +40,7 @@ const BookingForm = () => {
 
   const errorToast = () => {
     toast({
-      title: 'Room not AVALIABLE.',
+      title: 'Room NOT AVALIABLE.',
       status: 'error',
       duration: 6000,
       isClosable: true,
@@ -72,7 +72,7 @@ const BookingForm = () => {
           bookingStartDate.getTime() === startDateData.getTime() ||
           bookingEndDate.getTime() === endDateData.getTime() ||
           bookingStartDate.getTime() === bookingEndDate.getTime() ||
-          bookingStartDate.getTime() < bookingEndDate.getTime()
+          bookingStartDate.getTime() > bookingEndDate.getTime()
         ) {
           return false;
         } else {
@@ -88,12 +88,13 @@ const BookingForm = () => {
   );
 
   const submitBooking = async () => {
-    if (!isPassBookingCondition) {
+    if (inputTitle === '' || startDate === null || endDate === null) {
+      setIsSubmitEject(true);
       errorToast();
       return;
     }
-    if (inputTitle === '' || startDate === null || endDate === null) {
-      setIsSubmitEject(true);
+    if (!isPassBookingCondition) {
+      console.warn('ERROR TIME CONDITION');
       errorToast();
       return;
     }

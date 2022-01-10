@@ -8,7 +8,6 @@ export default function handler(
 ) {
   if (req.method === 'GET') {
     res.status(200).json(bookingData);
-    const date = new Date(Date.parse(bookingData[0].startTime));
   } else if (req.method === 'POST') {
     const bookingDetails: BookingDataType = req.body;
     const newBooking: BookingDataType = {
