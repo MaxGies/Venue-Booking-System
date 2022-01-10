@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+ก่อนกระบวนการด้านล่าง หลังจาก load เสร็จ ให้ทำการรัน npm i ใน terminal ที่ cd ถึง โฟลเดอร์ ก่อน หลังจากนั้นจึง ค่อย run คำสั่ง npm run dev ครับ
+
 ## Getting Started
 
 First, run the development server:
