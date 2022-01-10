@@ -239,6 +239,7 @@ const RoomPage = () => {
             <Flex gridGap="16px" direction="column">
               {bookedRoom.map((data) => (
                 <Flex
+                  key={data.startTime}
                   p="16px"
                   gridGap="12px"
                   border="1px"
