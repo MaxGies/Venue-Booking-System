@@ -1,7 +1,16 @@
 import { useState, useEffect } from 'react';
-import { Text, Flex } from '@chakra-ui/react';
+import {
+  Text,
+  Flex,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Button,
+} from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { ChevronDownIcon } from '@chakra-ui/icons';
 
 const NavBar = () => {
   return (
@@ -36,6 +45,28 @@ const NavBar = () => {
               </Text>
             </a>
           </Link>
+          <Menu>
+            <MenuButton as={Text} cursor="pointer" color="white">
+              Room Timeline
+            </MenuButton>
+            <MenuList>
+              <Link href="/bookings/A101">
+                <a>
+                  <MenuItem>Room A101</MenuItem>
+                </a>
+              </Link>
+              <Link href="/bookings/A102">
+                <a>
+                  <MenuItem>Room A102</MenuItem>
+                </a>
+              </Link>
+              <Link href="/bookings/Auditorium">
+                <a>
+                  <MenuItem>Room Auditorium</MenuItem>
+                </a>
+              </Link>
+            </MenuList>
+          </Menu>
         </Flex>
       </Flex>
     </Flex>

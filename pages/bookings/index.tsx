@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Text, Flex } from '@chakra-ui/react';
 
 import Container from '../../components/Layouts/Container';
